@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Interest Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div>
+      <div class="language-select">
+        <select id="languageSwitcher">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="te">తెలుగు</option>
+        </select>
+      </div>
+      <div class="calculator-container">
+        <h1 id="titleText">Simple Interest Calculator</h1>
+        <form id="interestForm">
+          <label for="principal" id="labelPrincipal">Principal Amount:</label>
+          <input type="number" id="principal" required />
+
+          <label for="rate" id="labelRate">Rate of Interest (%):</label>
+          <input type="number" id="rate" required />
+
+          <label for="rateType" id="labelRateType">Rate Type:</label>
+          <select id="rateType">
+            <option value="monthly" id="optionMonthly">Per Month</option>
+            <option value="annually" id="optionAnnually">Per Annum</option>
+          </select>
+
+          <label for="time" id="labelTime">Time Period:</label>
+          <input type="number" id="time" required />
+
+          <label for="timeUnit" id="labelTimeUnit">Time Unit:</label>
+          <select id="timeUnit">
+            <option value="years" id="optionYears">Years</option>
+            <option value="months" id="optionMonths">Months</option>
+            <option value="days" id="optionDays">Days</option>
+          </select>
+
+          <label for="currency" id="labelCurrency">Currency:</label>
+          <select id="currency">
+            <option value="₹">INR (₹)</option>
+            <option value="$">USD ($)</option>
+            <option value="€">EUR (€)</option>
+            <option value="£">GBP (£)</option>
+          </select>
+
+          <button type="submit" id="buttonCalculate">Calculate</button>
+        </form>
+      </div>
+    </div>
+    <div class="result-side">
+      <div class="result" id="resultBox">
+        <h3 id="resultLabel">Result</h3>
+        <p id="resultText">Fill the form to calculate interest.</p>
+      </div>
+      <div class="history">
+        <h3 id="historyLabel">Calculation History</h3>
+        <button id="clearHistoryBtn" class="clear-btn">🗑️ Clear History</button>
+        <div id="historyList"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
